@@ -1,46 +1,53 @@
 <template>
-  <Title id="todo" name="To-Do-List" />
-  <todoinput />
-  <todolist />
+  <div id="app">
+    <TodoHeader></TodoHeader>
+    <TodoInput></TodoInput>
+    <TodoList></TodoList>
+    <TodoFooter></TodoFooter>
+  </div>
 </template>
 
 <script>
 /* eslint-disable */
-import Title from "./components/title.vue";
-import todoinput from "./components/input.vue";
-import todolist from "./components/todolist.vue";
+import TodoHeader from "./components/TodoHeader.vue";
+import TodoInput from "./components/TodoInput.vue";
+import TodoList from "./components/TodoList.vue";
+import TodoFooter from "./components/TodoFooter.vue";
 
 export default {
-  name: "App",
   components: {
-    Title,
-    todoinput,
-    todolist,
+    TodoHeader: TodoHeader,
+    TodoInput: TodoInput,
+    TodoList: TodoList,
+    TodoFooter: TodoFooter,
   },
   data() {
-    return {
-      todos: [],
-    };
+    return {};
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+body {
   text-align: center;
-  color: #2c3e50;
+  background-color: #f6f6f6;
 }
-
-nav {
-  padding: 30px;
+input {
+  border-style: groove;
+  width: 200px;
 }
-#todo {
-  font-weight: bold;
-  text-decoration: none;
-  color: #42b983;
-  font-size: 20px;
+button {
+  border-style: groove;
+}
+.shadow {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
+}
+html,
+body {
+  font-family: "Itim", cursive;
+}
+#app {
+  font-family: "Itim", cursive;
 }
 </style>

@@ -7,7 +7,7 @@
 <script>
 /* eslint-disable */
 // @ is an alias to /src
-import HelloWorld from "@/components/title.vue";
+import HelloWorld from "@/components/TodoHeader.vue";
 
 export default {
   name: "HomeView",
